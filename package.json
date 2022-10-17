@@ -36,8 +36,8 @@
     "web3-react": "^5.0.5"
   },
   "scripts": {
-    "start": "react-app-rewired start",
-    "build": "react-app-rewired build",
+    "start": "react-app-rewired --max-old-space-size=8192 start",
+    "build": "react-app-rewired --max-old-space-size=8192 build",
     "test": "react-app-rewired test",
     "eject": "react-app-rewired eject"
   },
