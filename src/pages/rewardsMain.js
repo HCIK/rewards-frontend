@@ -1,7 +1,7 @@
 import React, { PureComponent } from "react";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import styled from 'styled-components';
-import AppBar from './../components/AppBar/AppBar2';
+import AppBar from './../components/AppBar/AppBar';
 import Footer02 from './../components/Footer/Footer02';
 import NavBullets from './../components/NavBullets';
 
