@@ -1,6 +1,5 @@
 import React, { Component, useState } from 'react';
 import MainLayout from '../../components/layout/MainLayout';
-import BigPad from './BigPad';
 import RewardCard from './RewardCard';
 import DvoucherCard from './DvoucherCard';
 import jackpot from '../../assets/main-jackpot.png';
@@ -8,17 +7,19 @@ import roundedrectangle from '../../assets/Rounded Rectangle 2582.png';
 import layer2589 from '../../assets/fire.gif';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretRight, faCaretUp } from '@fortawesome/free-solid-svg-icons';
+import CountdownTimer from './CountdownTimer';
+import { useNavigate } from 'react-router-dom';
 
 
 const Main = () => {
 
-    const num = [1, 4, 8, 5, 6, 9, 6, 5];
     const [isOpen, setOpen] = React.useState(true);
     const [isOpen2, setOpen2] = React.useState(true);
     const [isOpen3, setOpen3] = React.useState(true);
     const [isOpen4, setOpen4] = React.useState(true);
     const [isOpen5, setOpen5] = React.useState(true);
     const [isOpen6, setOpen6] = React.useState(true);
+    const navigate = useNavigate()
     
     return (
         <MainLayout>
@@ -49,27 +50,11 @@ const Main = () => {
                     <p className='md:absolute text-center bottom-0 right-1/2 md:translate-x-1/2 text-white-main font-bold font-montserrat text-2 mt-2'>Total dVoucher</p>
                 </div>
                 <div className='px-5 md:px-56'>
-                    <div>
-                        <div className='flex justify-center items-end mt-7 wow bounce' delay="0.4">
-                            <BigPad num={num[0]} />
-                            <BigPad num={num[1]} />
-                            <p className='mx-2 text-2 md:text-7 font-play text-yellow-main leading-13'>,</p>
-                            <BigPad num={num[2]} />
-                            <BigPad num={num[3]} />
-                            <BigPad num={num[4]} />
-                            <p className='mx-2 text-2 md:text-7 font-play text-yellow-main leading-13'>,</p>
-                            <BigPad num={num[5]} />
-                            <BigPad num={num[6]} />
-                            <BigPad num={num[7]} />
-                        </div>
-                        <p className='text-4 leading-2 font-montserrat text-white-2 text-center mt-5'><span className='font-bold text-white-main'>30</span> days : <span className='font-bold text-white-main'>22</span> hours : <span className='font-bold text-white-main'>09</span> minutes : <span className='font-bold text-white-main'>12</span> seconds
-                            {/* <span className='text-yellow-main'>Check your lottery reward</span> */}
-                        </p>
-                    </div>
+                    <CountdownTimer />
                     <div className='mt-14 '>
                         <p className='text-2 leading-[36px] text-white-2 font-montserrat text-center mb-8 md:mb-12'>Choose how do you want to gain your dVouchers</p>
                         <div className='grid gap-7 grid-cols-1 md:grid-cols-2 lg:grid-cols-4'>
-                            <RewardCard delay='0.3s' image='reward1' compensation='Up to $250,000 a month' title='Personal rewards' />
+                            <div onClick = {() => {navigate('/rewards')}}><RewardCard delay='0.3s' image='reward1' compensation='Up to $250,000 a month' title='Personal rewards' /></div>
                             <RewardCard delay='0.4s' image='reward2' compensation='Up to $200,000 a month' title='Group rewards' />
                             <RewardCard delay='0.5s' image='reward3' compensation='Up to $250,000 a month' title='Competition' />
                             <RewardCard delay='0.6s' image='reward4' compensation='Up to $250,000 a month' title='Social engagement' />

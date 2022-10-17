@@ -29,10 +29,6 @@ import project17 from './../assets/rewards/project17.png'
 import project18 from './../assets/rewards/project18.png'
 import project19 from './../assets/rewards/project19.png'
 
-import iframe1 from './../assets/iframe1.jpg'
-import iframe2 from './../assets/iframe2.jpg'
-import iframe3 from './../assets/iframe3.jpg'
-import iframe4 from './../assets/iframe4.jpg'
 import Smlogin from './../assets/sm.jpg'
 
 
@@ -46,7 +42,7 @@ export default class PersonalRewards extends PureComponent {
       <>
         <Container>
           <BreadCrumbs>
-            <BreadLinks>Main page</BreadLinks>
+            <BreadLinks href="/">Main page</BreadLinks>
             <FontAwesomeIcon icon={faAngleRight} className='mx-1' />
             <BreadLinks href="/rewards/">Personal rewards</BreadLinks>
             <FontAwesomeIcon icon={faAngleRight} className='mx-1' />
@@ -76,7 +72,7 @@ export default class PersonalRewards extends PureComponent {
                   <p className="text-white-2 text-8 mt-7 leading-8">Personal rewards encourage completing certain simple tasks like following a specific social channel. Every earned dVoucher automatically creates a Lottery entry.  </p>
                 </div>
                 <IFrameCol>
-                  <iframe className="w-full md:w-[660px] h-[1000px]" src="https://gleam.io/VzFR5/daily-tasks"></iframe>
+                  <iframe className="w-full md:w-[660px] h-[1007px]" src="https://gleam.io/VzFR5/daily-tasks"></iframe>
                   {/* <button className="btn-golden shadow-lg w-full px-3 py-4 md:w-[660px] md:h-[80px] mt-6 bg-yellow-main border-2 border-solid bg-opacity-0 text-white-1 font-bold text-xl uppercase">
                     <FontAwesomeIcon icon={faLock} className='mr-2' /> Unlock 3 More Entries
                     <span className="text-xs block normal-case	">Complete the above entries to unlock the rest!</span>
@@ -95,7 +91,7 @@ export default class PersonalRewards extends PureComponent {
                   </div>
                   <p className="text-white-2 text-8 mt-7 leading-8">Engaging with Qonetum Foundation social posts needs to be consistent in order to achieve long-term organic growth. Therefore, users are eligible for dVoucher by engaging consistently with Qonetum. </p>
                   <IFrameCol>
-                    <iframe className="w-full md:w-[660px] h-[1000px]" src="https://gleam.io/otY3K/qonetum-finance-contest-for-la-blockchain-week"></iframe>
+                    <iframe className="w-full md:w-[660px] h-[1533px]" src="https://gleam.io/otY3K/qonetum-finance-contest-for-la-blockchain-week"></iframe>
                   </IFrameCol>
                 </div>
               </StepSec>
@@ -109,7 +105,7 @@ export default class PersonalRewards extends PureComponent {
                   </div>
                   <p className="text-white-2 text-8 mt-7 leading-8">The loyalty bonus program incentivizes users to engage with all the Qonetum finance projects</p>
                   <IFrameCol>
-                    <iframe className="w-full md:w-[660px] h-[1000px]" src="https://gleam.io/ygi5N/la-blockchain-summit-qonetum-finance-dvoucher-awards"></iframe>
+                    <iframe className="w-full md:w-[660px] h-[2151px]" src="https://gleam.io/ygi5N/la-blockchain-summit-qonetum-finance-dvoucher-awards"></iframe>
                   </IFrameCol>
                 </div>
               </StepSec>
@@ -124,7 +120,7 @@ export default class PersonalRewards extends PureComponent {
                   </div>
                   <p className="text-white-2 text-8 mt-7 leading-8">Visit and view Qonetum sites daily to check out new functionalities </p>
                   <IFrameCol>
-                    <iframe className="w-full md:w-[660px] h-[1000px]" src="https://gleam.io/gmbJ9/qonetum-dvoucher-single-use-biweekly-lottery"></iframe>
+                    <iframe className="w-full md:w-[660px] h-[1351px]" src="https://gleam.io/gmbJ9/qonetum-dvoucher-single-use-biweekly-lottery"></iframe>
                   </IFrameCol>
                 </div>
               </StepSec>
@@ -137,7 +133,7 @@ export default class PersonalRewards extends PureComponent {
                     <h2 className="font-play text-white-main text-[24px] md:text-3xl md:ml-8 ml-4 leading-tight">Individual testing</h2>
                   </div>
                   <IFrameCol>
-                    <iframe className="w-full md:w-[660px] h-[1000px]" src="https://gleam.io/yjzVW/pdo-contest-for-weld-ama-pdo"></iframe>
+                    <iframe className="w-full md:w-[660px] h-[1574px]" src="https://gleam.io/yjzVW/pdo-contest-for-weld-ama-pdo"></iframe>
                   </IFrameCol>
                 </div>
               </StepSec>

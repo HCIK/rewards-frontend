@@ -5,6 +5,7 @@ import Footer from '../components/Footer/Footer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLock, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import { useNavigate } from "react-router-dom";
 
 
 // Images
@@ -28,55 +29,53 @@ import project17 from './../assets/rewards/project17.png'
 import project18 from './../assets/rewards/project18.png'
 import project19 from './../assets/rewards/project19.png'
 
-import iframe1 from './../assets/iframe1.jpg'
-import iframe2 from './../assets/iframe2.jpg'
-import iframe3 from './../assets/iframe3.jpg'
 
 
 
-export default class PersonalRewards extends PureComponent {
-  render() {
-    return (
-      <>
-        <Container>
-          <BreadCrumbs>
-            <BreadLinks>Main page</BreadLinks>
-            <FontAwesomeIcon icon={faAngleRight} className='mx-1' />
-            <BreadLinks>Personal rewards</BreadLinks>
-          </BreadCrumbs>
-          <div class="font-play text-white-main text-9 md:text-1 text-center" data-wow-delay="0.1s">choose a project for personal reward</div>
-          <ChooseProject>
-            <ProjectItems className="active wow zoomIn"><img src={project1}></img></ProjectItems>
-            <ProjectItems className="wow zoomIn"><img src={project2}></img></ProjectItems>
-            <ProjectItems className="wow zoomIn"><img src={project3}></img></ProjectItems>
-            <ProjectItems className="wow zoomIn"><img src={project4}></img></ProjectItems>
-            <ProjectItems className="wow zoomIn"><img src={project5}></img></ProjectItems>
-            <ProjectItems className="wow zoomIn"><img src={project6}></img></ProjectItems>
-            <ProjectItems className="wow zoomIn"><img src={project7}></img></ProjectItems>
-            <ProjectItems className="wow zoomIn"><img src={project8}></img></ProjectItems>
-            <ProjectItems className="disable wow zoomIn"><img src={project9}></img></ProjectItems>
-            <ProjectItems className="disable wow zoomIn"><img src={project10}></img></ProjectItems>
-            <ProjectItems className="disable wow zoomIn"><img src={project11}></img></ProjectItems>
-            <ProjectItems className="disable wow zoomIn"><img src={project12}></img></ProjectItems>
-            <ProjectItems className="disable wow zoomIn"><img src={project13}></img></ProjectItems>
-            <ProjectItems className="disable wow zoomIn"><img src={project14}></img></ProjectItems>
-            <ProjectItems className="wow zoomIn"><span>Connect Wallet</span></ProjectItems>
-            <ProjectItems className="disable wow zoomIn"><img src={project15}></img></ProjectItems>
-            <ProjectItems className="disable wow zoomIn"><img src={project16}></img></ProjectItems>
-            <ProjectItems className="disable wow zoomIn"><img src={project17}></img></ProjectItems>
-            <ProjectItems className="disable wow zoomIn"><img src={project18}></img></ProjectItems>
-            <ProjectItems className="disable wow zoomIn"><img src={project19}></img></ProjectItems>
-          </ChooseProject>
-          <Newsletter className="wow fadeInUp" data-wow-delay="0.6s">
-            <label for="">Let me know when new project become available</label>
-            <input className="email text-white-main h-[40px] w-[280px] bg-transparent border-2 border-solid" type="email" placeholder="Email address"></input>
-            <button className="btn-golden w-[120px] h-[40px] bg-yellow-main border-2 border-solid bg-opacity-0 text-white-1 font-bold text-5 font-montserrat">SUBMIT</button>
-          </Newsletter>
-        </Container>
-      </>
-    );
-  }
+const PersonalRewards = () => {
+  const navigate = useNavigate()
+
+  return (
+    <>
+      <Container>
+        <BreadCrumbs>
+          <BreadLinks href="/">Main page</BreadLinks>
+          <FontAwesomeIcon icon={faAngleRight} className='mx-1' />
+          <BreadLinks>Personal rewards</BreadLinks>
+        </BreadCrumbs>
+        <div class="font-play text-white-main text-9 md:text-1 text-center" data-wow-delay="0.1s">choose a project for personal reward</div>
+        <ChooseProject>
+          <ProjectItems onClick={() => { navigate('/rewards/personal-rewards-tabs') }} className="active wow zoomIn"><img src={project1}></img></ProjectItems>
+          <ProjectItems className="wow zoomIn"><img src={project2}></img></ProjectItems>
+          <ProjectItems className="wow zoomIn"><img src={project3}></img></ProjectItems>
+          <ProjectItems className="wow zoomIn"><img src={project4}></img></ProjectItems>
+          <ProjectItems className="wow zoomIn"><img src={project5}></img></ProjectItems>
+          <ProjectItems className="wow zoomIn"><img src={project6}></img></ProjectItems>
+          <ProjectItems className="wow zoomIn"><img src={project7}></img></ProjectItems>
+          <ProjectItems className="wow zoomIn"><img src={project8}></img></ProjectItems>
+          <ProjectItems className="disable wow zoomIn"><img src={project9}></img></ProjectItems>
+          <ProjectItems className="disable wow zoomIn"><img src={project10}></img></ProjectItems>
+          <ProjectItems className="disable wow zoomIn"><img src={project11}></img></ProjectItems>
+          <ProjectItems className="disable wow zoomIn"><img src={project12}></img></ProjectItems>
+          <ProjectItems className="disable wow zoomIn"><img src={project13}></img></ProjectItems>
+          <ProjectItems className="disable wow zoomIn"><img src={project14}></img></ProjectItems>
+          <ProjectItems className="wow zoomIn"><span>Connect Wallet</span></ProjectItems>
+          <ProjectItems className="disable wow zoomIn"><img src={project15}></img></ProjectItems>
+          <ProjectItems className="disable wow zoomIn"><img src={project16}></img></ProjectItems>
+          <ProjectItems className="disable wow zoomIn"><img src={project17}></img></ProjectItems>
+          <ProjectItems className="disable wow zoomIn"><img src={project18}></img></ProjectItems>
+          <ProjectItems className="disable wow zoomIn"><img src={project19}></img></ProjectItems>
+        </ChooseProject>
+        <Newsletter className="wow fadeInUp" data-wow-delay="0.6s">
+          <label for="">Let me know when new project become available</label>
+          <input className="email text-white-main h-[40px] w-[280px] bg-transparent border-2 border-solid" type="email" placeholder="Email address"></input>
+          <button className="btn-golden w-[120px] h-[40px] bg-yellow-main border-2 border-solid bg-opacity-0 text-white-1 font-bold text-5 font-montserrat">SUBMIT</button>
+        </Newsletter>
+      </Container>
+    </>
+  );
 }
+export default PersonalRewards
 
 const FlexDiv = styled.div`
   display: flex; align-items: center; justify-content: center; flex-wrap: wrap;
@@ -122,7 +121,7 @@ const ProjectItems = styled(FlexDiv)`
     img {opacity: 0.4;}
   }
 `
-const Newsletter = styled.div `
+const Newsletter = styled.div`
   display: flex; padding: 80px 0; align-items: center; justify-content: center; 
   label {color: #989898; font-size: 12px; margin: 0; margin-right: 20px; }
   .email {margin-right: 10px; border-color: #252525; padding: 0 14px;}
@@ -148,9 +147,9 @@ const StepNav = styled(FlexDiv)`
     }
   }
 `
-const StepSec = styled.section `
+const StepSec = styled.section`
   margin-top: 88px;
 `
-const IFrameCol = styled(FlexDiv) `
+const IFrameCol = styled(FlexDiv)`
   margin: 60px 0; flex-flow: column;
 `
