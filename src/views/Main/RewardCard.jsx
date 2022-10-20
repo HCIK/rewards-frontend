@@ -15,7 +15,7 @@ const RewardCard = (props) => {
 
     return (
         <>
-            <div className='flex items-center py-3 h-[120px] bg-dark-main border-2 border-solid border-white-3 pr-5 hover-item wow fadeInUp' data-wow-delay={delay}>
+            <div className='flex items-center py-3 h-[120px] bg-dark-main border-2 border-solid border-white-3 pr-5 hover-item wow fadeInUp cursor-pointer' data-wow-delay={delay}>
                 <div className='px-5'>
                     {image == 'reward1' && <img src={reward1} alt='reward' />}
                     {image == 'reward2' && <img src={reward2} alt='reward' />}

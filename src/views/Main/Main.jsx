@@ -54,14 +54,14 @@ const Main = () => {
                     <div className='mt-14 '>
                         <p className='text-2 leading-[36px] text-white-2 font-montserrat text-center mb-8 md:mb-12'>Choose how do you want to gain your dVouchers</p>
                         <div className='grid gap-7 grid-cols-1 md:grid-cols-2 lg:grid-cols-4'>
-                            <div onClick = {() => {navigate('/rewards')}}><RewardCard delay='0.3s' image='reward1' compensation='Up to $250,000 a month' title='Personal rewards' /></div>
-                            <RewardCard delay='0.4s' image='reward2' compensation='Up to $200,000 a month' title='Group rewards' />
-                            <RewardCard delay='0.5s' image='reward3' compensation='Up to $250,000 a month' title='Competition' />
-                            <RewardCard delay='0.6s' image='reward4' compensation='Up to $250,000 a month' title='Social engagement' />
-                            <RewardCard delay='0.7s' image='reward5' compensation='Unlimited dVouchers' title='Referral program' />
-                            <RewardCard delay='0.8s' image='reward6' compensation='Unlimited dVouchers' title='Staking reward' />
-                            <RewardCard delay='0.9s' image='reward7' compensation='Unlimited dVouchers' title='Trading rewards' />
-                            <RewardCard delay='1s' image='reward8' compensation='Unlimited dVouchers ' title='Dead tokens recovery' />
+                            <div onClick = {() => {navigate('/rewards/personal-rewards')}}><RewardCard delay='0.3s' image='reward1' compensation='Up to $250,000 a month' title='Personal rewards' /></div>
+                            <div onClick={() => {navigate('/rewards/group-rewards')}}><RewardCard delay='0.4s' image='reward2' compensation='Up to $200,000 a month' title='Group rewards' /></div>
+                            <div onClick = {() => {navigate('/rewards/competition-rewards')}}><RewardCard delay='0.5s' image='reward3' compensation='Up to $250,000 a month' title='Competition' /></div>
+                            <div onClick = {() => {navigate('/rewards/social-engagement')}}><RewardCard delay='0.6s' image='reward4' compensation='Up to $250,000 a month' title='Social engagement' /></div>
+                            <div onClick = {() => {navigate('/rewards/referral-program')}}><RewardCard delay='0.7s' image='reward5' compensation='Unlimited dVouchers' title='Referral program' /></div>
+                            <div onClick = {() => {navigate('/rewards/staking-rewards')}}><RewardCard delay='0.8s' image='reward6' compensation='Unlimited dVouchers' title='Staking reward' /></div>
+                            <div onClick = {() => {navigate('/rewards/trading-rewards')}}><RewardCard delay='0.9s' image='reward7' compensation='Unlimited dVouchers' title='Trading rewards' /></div>
+                            <div onClick = {() => {navigate('/rewards/dead-token-recovery')}}><RewardCard delay='1s' image='reward8' compensation='Unlimited dVouchers ' title='Dead tokens recovery' /></div>
                         </div>
                         <hr className='mt-16 border-white-3' />
                     </div>

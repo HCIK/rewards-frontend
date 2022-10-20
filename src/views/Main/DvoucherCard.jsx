@@ -13,7 +13,7 @@ const DvoucherCard = (props) => {
     const { image, compensation, title, delay } = props;
     return (
         <>
-            <div>
+            <div className='cursor-pointer'>
                 {image == 'dvoucher1' &&
                     <div className='typeOfV bronze wow fadeInUp' data-wow-delay={`0.${delay}s`}>
                         <div className='flex py-4 pr-12 mb-2 h-[120px] items-center border-2 border-solid border-white-3'>

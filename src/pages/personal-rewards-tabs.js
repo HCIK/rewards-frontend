@@ -29,6 +29,10 @@ import project17 from './../assets/rewards/project17.png'
 import project18 from './../assets/rewards/project18.png'
 import project19 from './../assets/rewards/project19.png'
 
+import iframe1 from './../assets/iframe1.jpg'
+import iframe2 from './../assets/iframe2.jpg'
+import iframe3 from './../assets/iframe3.jpg'
+import iframe4 from './../assets/iframe4.jpg'
 import Smlogin from './../assets/sm.jpg'
 
 
@@ -44,21 +48,21 @@ export default class PersonalRewards extends PureComponent {
           <BreadCrumbs>
             <BreadLinks href="/">Main page</BreadLinks>
             <FontAwesomeIcon icon={faAngleRight} className='mx-1' />
-            <BreadLinks href="/rewards/">Personal rewards</BreadLinks>
+            <BreadLinks href="/rewards/personal-rewards">Personal rewards</BreadLinks>
             <FontAwesomeIcon icon={faAngleRight} className='mx-1' />
-            <BreadLinks>PDO finance</BreadLinks>
+            <BreadLinks href="/rewards/personal-rewards-tabs">PDO finance</BreadLinks>
           </BreadCrumbs>
           <Tabs>
             <StepNav >
               <TabList className="mt--10">
-                <Tab className='wow flipInY'><span>Simple one time tasks</span></Tab>
-                <Tab className='wow flipInY'><span>Multiple task</span></Tab>
-                <Tab className='wow flipInY'><span>Loyalty bonus</span></Tab>
-                <Tab className='wow flipInY'><span>Daily check out</span></Tab>
-                <Tab className='wow flipInY'><span>Individual testing</span></Tab>
-                <Tab className='wow flipInY'><span>Issue finding</span></Tab>
-                <Tab className='wow flipInY'><span>Learn and earn</span></Tab>
-                <Tab className='wow flipInY'><span>Affiliate program</span></Tab>
+                <Tab className='wow flipInY cursor-pointer'><span>Simple one time tasks</span></Tab>
+                <Tab className='wow flipInY cursor-pointer'><span>Multiple task</span></Tab>
+                <Tab className='wow flipInY cursor-pointer'><span>Loyalty bonus</span></Tab>
+                <Tab className='wow flipInY cursor-pointer'><span>Daily check out</span></Tab>
+                <Tab className='wow flipInY cursor-pointer'><span>Individual testing</span></Tab>
+                <Tab className='wow flipInY cursor-pointer'><span>Issue finding</span></Tab>
+                <Tab className='wow flipInY cursor-pointer'><span>Learn and earn</span></Tab>
+                <Tab className='wow flipInY cursor-pointer'><span>Affiliate program</span></Tab>
               </TabList>
             </StepNav>
 
@@ -72,14 +76,13 @@ export default class PersonalRewards extends PureComponent {
                   <p className="text-white-2 text-8 mt-7 leading-8">Personal rewards encourage completing certain simple tasks like following a specific social channel. Every earned dVoucher automatically creates a Lottery entry.  </p>
                 </div>
                 <IFrameCol>
-                  <iframe className="w-full md:w-[660px] h-[1007px]" src="https://gleam.io/VzFR5/daily-tasks"></iframe>
+                  <iframe className="w-full md:w-[660px] h-[1351px]" src="https://gleam.io/gmbJ9/simple-one-time-tasks"></iframe>
+
                   {/* <button className="btn-golden shadow-lg w-full px-3 py-4 md:w-[660px] md:h-[80px] mt-6 bg-yellow-main border-2 border-solid bg-opacity-0 text-white-1 font-bold text-xl uppercase">
                     <FontAwesomeIcon icon={faLock} className='mr-2' /> Unlock 3 More Entries
                     <span className="text-xs block normal-case	">Complete the above entries to unlock the rest!</span>
                   </button> */}
                 </IFrameCol>
-
-
               </StepSec>
             </TabPanel>
             <TabPanel>
@@ -91,7 +94,7 @@ export default class PersonalRewards extends PureComponent {
                   </div>
                   <p className="text-white-2 text-8 mt-7 leading-8">Engaging with Qonetum Foundation social posts needs to be consistent in order to achieve long-term organic growth. Therefore, users are eligible for dVoucher by engaging consistently with Qonetum. </p>
                   <IFrameCol>
-                    <iframe className="w-full md:w-[660px] h-[1533px]" src="https://gleam.io/otY3K/qonetum-finance-contest-for-la-blockchain-week"></iframe>
+                    <iframe className="w-full md:w-[660px] h-[843px]" src="https://gleam.io/tNKQz/multiple-tasks"></iframe>
                   </IFrameCol>
                 </div>
               </StepSec>
@@ -105,12 +108,11 @@ export default class PersonalRewards extends PureComponent {
                   </div>
                   <p className="text-white-2 text-8 mt-7 leading-8">The loyalty bonus program incentivizes users to engage with all the Qonetum finance projects</p>
                   <IFrameCol>
-                    <iframe className="w-full md:w-[660px] h-[2151px]" src="https://gleam.io/ygi5N/la-blockchain-summit-qonetum-finance-dvoucher-awards"></iframe>
+                    <iframe className="w-full md:w-[660px] h-[1574px]" src="https://gleam.io/yjzVW/pdo-contest-for-weld-ama-pdo"></iframe>
                   </IFrameCol>
                 </div>
               </StepSec>
             </TabPanel>
-
             <TabPanel>
               <StepSec className="wow fadeInUp" data-wow-delay="0s">
                 <div className="">
@@ -120,7 +122,7 @@ export default class PersonalRewards extends PureComponent {
                   </div>
                   <p className="text-white-2 text-8 mt-7 leading-8">Visit and view Qonetum sites daily to check out new functionalities </p>
                   <IFrameCol>
-                    <iframe className="w-full md:w-[660px] h-[1351px]" src="https://gleam.io/gmbJ9/qonetum-dvoucher-single-use-biweekly-lottery"></iframe>
+                    <iframe className="w-full md:w-[660px] h-[597px]" src="https://gleam.io/VzFR5/daily-usage"></iframe>
                   </IFrameCol>
                 </div>
               </StepSec>
@@ -132,9 +134,16 @@ export default class PersonalRewards extends PureComponent {
                     <span className="font-play w-[56px] h-[56px] border-2 border-solid inline-flex text-white justify-center items-center text-3xl text-white-main">5</span>
                     <h2 className="font-play text-white-main text-[24px] md:text-3xl md:ml-8 ml-4 leading-tight">Individual testing</h2>
                   </div>
-                  <IFrameCol>
+                  <p className="text-white-2 text-8 mt-7 leading-8">From time to time, Qonetum Foundation will need a group of users to perform a specific dApp request. The tests may require execution at a certain time or require certain technology stacks to execute. Think of this as a focus group for DeFi. Every time you do a task and question, earn a reward. </p>
+                  <p className="text-white-2 text-8 mt-7 leading-8">Community stress tests are healthy for product development and in encouraging engagement from users in the community. The more aligned users are with the project's success, the more organic growth the project may experience. </p>
+                  <p className="text-white-2 text-8 mt-7 leading-8"><b>Rewards</b></p>
+                  <ul className="list-disc pl-5">
+                    <li className="text-white-2 text-8 leading-8">Each individual test carries a specific dVoucher value</li>
+                    <li className="text-white-2 text-8 leading-8">For earning a dVoucher, users receive an entry into the monthly lottery</li>
+                  </ul>
+                  {/* <IFrameCol>
                     <iframe className="w-full md:w-[660px] h-[1574px]" src="https://gleam.io/yjzVW/pdo-contest-for-weld-ama-pdo"></iframe>
-                  </IFrameCol>
+                  </IFrameCol> */}
                 </div>
               </StepSec>
             </TabPanel>
@@ -171,6 +180,9 @@ export default class PersonalRewards extends PureComponent {
                       <a className="border-solid text-red-800 px-4 py-3 font-bold text-5 font-montserrat" href="#">Cancel</a>
                     </div>
                   </MsgBox>
+                  <IFrameCol>
+                    <iframe className="w-full md:w-[660px] h-[471px]" src="https://gleam.io/oGKyT/issue-finding"></iframe>
+                  </IFrameCol>
                 </div>
               </StepSec>
             </TabPanel>

@@ -41,11 +41,11 @@ const PersonalRewards = () => {
         <BreadCrumbs>
           <BreadLinks href="/">Main page</BreadLinks>
           <FontAwesomeIcon icon={faAngleRight} className='mx-1' />
-          <BreadLinks>Personal rewards</BreadLinks>
+          <BreadLinks href="/rewards/personal-rewards">Personal rewards</BreadLinks>
         </BreadCrumbs>
         <div class="font-play text-white-main text-9 md:text-1 text-center" data-wow-delay="0.1s">choose a project for personal reward</div>
         <ChooseProject>
-          <ProjectItems onClick={() => { navigate('/rewards/personal-rewards-tabs') }} className="active wow zoomIn"><img src={project1}></img></ProjectItems>
+          <ProjectItems onClick={() => { navigate('/rewards/personal-rewards-tabs') }} className="wow zoomIn"><img src={project1}></img></ProjectItems>
           <ProjectItems className="wow zoomIn"><img src={project2}></img></ProjectItems>
           <ProjectItems className="wow zoomIn"><img src={project3}></img></ProjectItems>
           <ProjectItems className="wow zoomIn"><img src={project4}></img></ProjectItems>
@@ -107,7 +107,7 @@ const ChooseProject = styled.div`
   }
 `
 const ProjectItems = styled(FlexDiv)`
-  height: 120px; border: 1px solid #252525; position: relative;
+  height: 120px; border: 1px solid #252525; position: relative; cursor: pointer;
   /* img {filter: grayscale(100) brightness(100)} */
   &:not(.disable):hover, &.active {border: 1px solid #e9a134; box-shadow: 0 0 10px #e9a134;
     img {filter: grayscale(100) brightness(0) invert(1)}
